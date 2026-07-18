@@ -4,17 +4,25 @@ import { getCollection } from 'astro:content';
 import PostCard from '../../components/PostCard.astro';
 
 const allPosts = await getCollection('posts');
-const latest = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).slice(0, 6);
+const byDateDesc = (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+const latestCricket = allPosts.filter(post => post.data.category === 'Cricket').sort(byDateDesc).slice(0, 3);
+const latestHistory = allPosts.filter(post => post.data.category === 'History').sort(byDateDesc).slice(0, 3);
 ---
 <Base title="Blog">
   <main class="sarva-main">
 
     <!-- Latest Posts -->
     <section>
-      <p class="sarva-section-label">Latest Posts</p>
       <h2 style="font-size:2rem;font-weight:700;margin-bottom:2rem">Fresh from the crease</h2>
+
+      <p class="sarva-section-label">Latest Cricket</p>
       <div class="post-grid">
-        {latest.map(post => <PostCard post={post} />)}
+        {latestCricket.map(post => <PostCard post={post} />)}
+      </div>
+
+      <p class="sarva-section-label" style="margin-top:3rem">Latest History</p>
+      <div class="post-grid">
+        {latestHistory.map(post => <PostCard post={post} />)}
       </div>
     </section>
 
