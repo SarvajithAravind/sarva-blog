@@ -1,0 +1,17 @@
+---
+title: "Loser Gets Eliminated: MATCH 58: - PBKSvRCB"
+date: "2024-05-09"
+category: "Cricket"
+slug: "loser-gets-eliminated-match-58-pbksvrcb"
+subcategories:
+  - name: "IPL 2024 MATCH REVIEWS"
+    slug: "ipl-2024"
+---
+
+Hello and a warm welcome to yet another blog on the daily match reviews on this year's IPL. Here I will talk about the game between the Punjab Kings and the Royal Challengers Bengaluru at the iconic H.P. C. A. Stadium in Dharamsala which as the title says was at a high stake, the loser would be out of contention for qualifying for the playoffs. If you are wondering why I have changed the title since the last game is because of the impact the last game created and I was compelled to change it but I thought maybe for content I could continue this new trend in the upcoming blogs. So the long intro is done and let's get started!  
+  
+Sam Curran won another toss and opted to field first on a track which offered some swing initially and Kaverappa used them superbly, creating many chances and got just 2 wickets in his opening spell. Since that, Patidar went beast mode with Kohli playing second-fiddle and when Patidar fell, rain with hail started to pour down. After resumption, Kohli took charge and played some scintillating shots and was supported well by Green and DK as RCB posted a mammoth 241. Prabhsimran fell early in the chase but Roussow and Bairstow were tonking everything to the fence, but the game tilted when Bairstow and Roussow fell and Shashank's run-out was the final nail in the coffin as RCB won by a huge margin by 60 runs, eliminating the Kings and kept their slim hopes alive.  
+  
+In another massive RCB win, I feel the real difference between the two teams was their quality of fielding. Kaverappa bowled an outstanding spell in the powerplay, picking up Faf and Jacks but should have had Kohli and Patidar, the latter's drop being rather easy. This proved to be costly, the cost being PBKS' hopes of qualification as Patidar called the big shots against Chahar and once again changed the momentum of the game and let the pressure go off Kohli. I still cannot understand why the Kings dropped Brar, who has a phenomenal record against RCB and was the only bowler who wasn't hit in the reverse fixture at the Chinnaswamy. Kohli took full advantage of this and since Kaverappa also bowled out early, he played some eye-catching shots and also at a strike rate just below 200 and RCB would be happy with the contributions by Green. But PBKS was going superbly after Prabhsimran fell early as Roussow regained his lost form and was smoking them cleanly, but the RCB pacers used a lot of slower balls and made good use of the knuckleball as the pitch was holding a bit. Faf smartly used Swapnil by bowling him in the middle overs as well and they clamped down the rate. But still, as the Kings were losing wickets, they picked up the boundaries regularly and had a genuine chance with Shashank looking good. But then came one of the craziest mid-air throws by Kohli, a direct hit that got Shashank and the innings fell apart after this. So overall as I said in the beginning, the fielding proved to be difference as the Kings dropped sitters while RCB were catching blinders and saved about 10 runs.  
+  
+So that's it for today. I am happy that RCB are still fighting and not giving up winning 4 on the trot. Tomorrow we may see the biggest crowd in a match in this year's IPL as GT take on CSK at Ahmedabad and expect more than 3/4 of the stadium to be filled with yellow. So I will catch you on that one

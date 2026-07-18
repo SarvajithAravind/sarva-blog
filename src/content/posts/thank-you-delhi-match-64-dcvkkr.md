@@ -1,0 +1,15 @@
+---
+title: "Thank You, Delhi!: MATCH 64: - DCvKKR"
+date: "2024-05-14"
+category: "Cricket"
+slug: "thank-you-delhi-match-64-dcvkkr"
+subcategories:
+  - name: "IPL 2024 MATCH REVIEWS"
+    slug: "ipl-2024"
+---
+
+Hello and a warm welcome to yet another blog on the daily match reviews of this year's IPL. Today's game was between the Delhi Capitals and the Lucknow Super Giants at the Arun Jaitley Stadium in Delhi, which in the context of the tournament is the most important result so far. So let's get started!  
+  
+KL Rahul won the toss and opted to field first and they had a dream start by getting Fraser-McGurk for a duck. Porel and Hope gave some good stability to DC. The LSG bowlers, to their credit, kept the scoring rate but it didn't stop DC from getting past 200 as some useful knocks by Pant and Stubbs as well helped them to get to a respectable total. LSG had a disastrous start, but Pooran was in the mood and started blasting everything he saw. Once he fell, the game seemed to be over but a surprising, yet blistering knock by the talented Arshad Khan gave the Super Giants some hope, but due to the lack of support, even his heroic performance couldn't save LSG from being placed precariously in the playoff race, with DC winning the game by 19 runs.  
+In another home win for DC, their bowlers won the day as it was a par total, and with LSG's firepower, they should have chased it. But the difference between the two teams was the lack of partnerships in LSG innings as only Pooran and Arshad gave them some hope in a completely lost game. But speaking about Arshad, just like Mayank Yadav, the DC management absolutely wouldn't have any expectations of Arshad playing today. LSG would be happy that this bunch of talents who have performed superbly on the big stage and he did also get Fraser-McGurk's wicket in the first over, a rare sight for the crowd as well. Delhi have had a fantastic season at home and had a very consistent season overall, but their loss to RCB crushed their ambitious hopes and just after two days, they give RCB a huge relief, as now it is on our hands, the match against CSK which we have to win by a considerable margin but the good thing is we do not need to worry about any other results. LSG are also practically out, a team which was enjoying being 3rd in the table, completely threw it away and now are at sixth. DC are also out and CSK, SRH and by the miracle of god, RCB remain in contention for the last two spots in the playoffs, as RR are officially qualified and DC bow out, but bow out by giving a lifeline to CSK and RCB as their fate remains in their hands.   
+So with that said, tomorrow is a game which will not matter much for the 3 teams, but will matter for RR as they will want to finish in the top 2 and have a good chance of playing the final at Chepauk. So stay tuned for that and have a good day!

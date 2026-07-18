@@ -1,0 +1,56 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  showNav?: boolean;
+}
+const { title = 'SARVA', description = 'Cricket analysis and history, written with passion.', showNav = true } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — SARVA</title>
+  <meta name="description" content={description} />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  {showNav && (
+    <header class="sarva-nav">
+      <div class="sarva-nav-inner">
+        <a href="/" class="sarva-logo">SARVA</a>
+        <nav class="sarva-nav-links">
+          <a href="/blog">Blog</a>
+          <a href="/cricket">Cricket</a>
+          <a href="/history">History</a>
+          <a href="/about">About</a>
+          <button class="sarva-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+        </nav>
+      </div>
+    </header>
+  )}
+
+  <slot />
+
+  <footer class="sarva-footer">
+    © {new Date().getFullYear()} SARVA · Cricket analysis and history, written with passion
+  </footer>
+
+  <script>
+    // Theme toggle
+    const btn = document.getElementById('theme-toggle');
+    const body = document.body;
+    const saved = localStorage.getItem('sarva-theme');
+    if (saved === 'light') { body.classList.add('light'); if (btn) btn.textContent = '🌙'; }
+
+    btn?.addEventListener('click', () => {
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      localStorage.setItem('sarva-theme', isLight ? 'light' : 'dark');
+      btn.textContent = isLight ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>

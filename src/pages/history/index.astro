@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+
+const allPosts = await getCollection('posts');
+const historyPosts = allPosts
+  .filter(p => p.data.category === 'History')
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const subcategories = [
+  { name: 'What If?', slug: 'what-if', desc: 'Counterfactual history deep dives' },
+  { name: 'Ottoman Wars', slug: 'ottomans', desc: 'The rise and fall of the Ottoman Empire' },
+];
+---
+<Base title="History">
+  <main class="sarva-main">
+    <div class="breadcrumb">
+      <a href="/blog">Blog</a>
+      <span>›</span>
+      <span style="color:var(--sarva-text)">History</span>
+    </div>
+
+    <h1 style="font-size:2.5rem;font-weight:700;margin-bottom:0.5rem">History</h1>
+    <p style="color:var(--sarva-muted);margin-bottom:3rem">Counterfactual essays and untold stories from the turning points of the past.</p>
+
+    <section>
+      <p class="sarva-section-label">All History Posts</p>
+      <div class="post-grid" style="margin-top:1rem">
+        {historyPosts.map(post => <PostCard post={post} />)}
+      </div>
+    </section>
+
+    <section style="margin-top:4rem">
+      <p class="sarva-section-label">Browse by Series</p>
+      <div class="subcat-grid" style="margin-top:1rem">
+        {subcategories.map(sub => (
+          <a href={`/history/${sub.slug}`} class="subcat-card">
+            <div>
+              <div style="font-weight:600">{sub.name}</div>
+              <div style="font-size:0.8rem;color:var(--sarva-muted);margin-top:0.25rem">{sub.desc}</div>
+            </div>
+            <span style="color:var(--sarva-muted)">→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,13 @@
+---
+title: "TATA IPL MATCH REVIEWS: CSK vs. KKR"
+date: "2024-04-08"
+category: "Cricket"
+slug: "tata-ipl-match-reviews-csk-vs-kkr"
+subcategories:
+  - name: "IPL 2024 MATCH REVIEWS"
+    slug: "ipl-2024"
+---
+
+Hello and a warm welcome to yet another blog on the daily match reviews of the ongoing season of the IPL. In this blog, I will write about match number 22 played between the Chennai Super Kings and the Kolkata Knight Riders at CSK fortress, Chepauk.  
+Ruturaj Gaikwad won the toss and opted to field on a pitch which would be easier to bat on during the second innings, with Shardul finally returning to the side. CSK were off to the perfect start by picking up Salt on the very first ball, but the talented Raghuvanshi and Narine stabilised innings and by the end of the powerplay, KKR were 56/1. But then Jadeja came in and picked 3 wickets, destroying the Knight Riders, which was enough for the innings to collapse on its own as the Fizz and Deshpande pitched in but Shreyas, with his 34 somehow got a stumbling innings to 137. The chase started with Rachin getting out early but Rutu was sublime, along with Mitchell and Rahane bringing the Super Kings to a commanding position in the game. The KKR spinners were not as effective as even Dube, as usual, tonked some boundaries, with Rutu, who stayed till the end with a calm and composed 67, guiding the Super Kings to a comfortable win by 7 wickets.  
+In another win for CSK at their fortress, the KKR batters should have applied themselves, and picked the singles and doubles in a classic Chepauk pitch, but they always wanted to be aggressive and threw their wickets away. The CSK bowlers had a perfect day after the two beatings by DC and SRH previously. But the most important thing that was lacking in the KKR innings was a player to anchor the innings. Rutu was steady, even though he played a very slow 67 runs off 58 balls, but the target was below CSK and the other batters played a touch aggressively, so CSK overall executed their plans brilliantly, a classic CSK win, similar to the GT win. This was KKR's first loss in their dream start in the tournament and it is almost impossible to win at Chepauk for a visiting team because CSK have a team designed for any track at Chepauk. Still, both teams placed nicely in the points table but this is a long tournament, and both teams need to show the same composure ahead of the tournament...

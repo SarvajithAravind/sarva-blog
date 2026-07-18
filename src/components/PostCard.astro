@@ -1,0 +1,19 @@
+---
+const { post } = Astro.props;
+const { title, date, category } = post.data;
+const tagClass = category === 'Cricket' ? 'tag-cricket' : 'tag-history';
+const bannerGradient = category === 'Cricket'
+  ? 'linear-gradient(135deg, #0a1628, #1a3a6e)'
+  : 'linear-gradient(135deg, #2d1810, #8b3a20)';
+const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const excerpt = post.body.replace(/[#*`\[\]>]/g, '').split('\n').find((l: string) => l.trim().length > 30)?.trim().slice(0, 160) || '';
+---
+<a href={`/blog/${post.slug}`} class="post-card">
+  <div class="post-card-banner" style={`background:${bannerGradient}`}></div>
+  <div class="post-card-body">
+    <span class={`post-tag ${tagClass}`}>{category}</span>
+    <h3 class="post-card-title">{title}</h3>
+    {excerpt && <p class="post-card-excerpt">{excerpt}</p>}
+    <time class="post-card-date">{formattedDate}</time>
+  </div>
+</a>

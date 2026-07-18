@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+
+const allPosts = await getCollection('posts');
+const cricketPosts = allPosts
+  .filter(p => p.data.category === 'Cricket')
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
+
+const subcategories = [
+  { name: 'IPL 2024 Match Reviews', slug: 'ipl-2024', count: 37, desc: 'Every single match from the 2024 season' },
+  { name: 'World Test Championship', slug: 'wtc', count: 1, desc: 'Test cricket\'s ultimate prize' },
+  { name: 'Tournament Reviews', slug: 'tournament-reviews', count: 2, desc: 'Post-tournament breakdowns' },
+  { name: 'Tournament Previews', slug: 'tournament-previews', count: 3, desc: 'Pre-tournament analysis' },
+];
+---
+<Base title="Cricket">
+  <main class="sarva-main">
+    <div class="breadcrumb">
+      <a href="/blog">Blog</a>
+      <span>›</span>
+      <span style="color:var(--sarva-text)">Cricket</span>
+    </div>
+
+    <h1 style="font-size:2.5rem;font-weight:700;margin-bottom:0.5rem">Cricket</h1>
+    <p style="color:var(--sarva-muted);margin-bottom:3rem">Match analysis, IPL coverage, and takes beyond the scorecard.</p>
+
+    <section>
+      <p class="sarva-section-label">Latest Cricket Posts</p>
+      <div class="post-grid" style="margin-top:1rem">
+        {cricketPosts.map(post => <PostCard post={post} />)}
+      </div>
+    </section>
+
+    <section style="margin-top:4rem">
+      <p class="sarva-section-label">Browse by Series</p>
+      <div class="subcat-grid" style="margin-top:1rem">
+        {subcategories.map(sub => (
+          <a href={`/cricket/${sub.slug}`} class="subcat-card">
+            <div>
+              <div style="font-weight:600">{sub.name}</div>
+              <div style="font-size:0.8rem;color:var(--sarva-muted);margin-top:0.25rem">{sub.desc}</div>
+            </div>
+            <span style="color:var(--sarva-muted)">→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Base>

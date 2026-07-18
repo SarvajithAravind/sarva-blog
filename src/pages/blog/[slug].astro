@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { title, date, category, subcategories, comments } = post.data;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const parentHref = category === 'Cricket' ? '/cricket' : '/history';
+const tagClass = category === 'Cricket' ? 'tag-cricket' : 'tag-history';
+const bannerGradient = category === 'Cricket'
+  ? 'linear-gradient(135deg, #0a1628, #1a3a6e)'
+  : 'linear-gradient(135deg, #2d1810, #8b3a20)';
+---
+<Base title={title}>
+  <main class="sarva-main">
+    <div class="breadcrumb">
+      <a href="/blog">Blog</a>
+      <span>›</span>
+      <a href={parentHref}>{category}</a>
+      {subcategories && subcategories.length > 0 && <>
+        <span>›</span>
+        <a href={`${parentHref}/${subcategories[0].slug}`}>{subcategories[0].name}</a>
+      </>}
+      <span>›</span>
+      <span style="color:var(--sarva-text)">{title}</span>
+    </div>
+
+    <div style={`height:16rem;border-radius:1rem;margin-bottom:2rem;background:${bannerGradient}`}></div>
+
+    <div style="max-width:42rem">
+      <span class={`post-tag ${tagClass}`}>{category}</span>
+      <h1 style="font-size:2rem;font-weight:700;line-height:1.3;margin:1rem 0 0.5rem;color:var(--sarva-text)">{title}</h1>
+      <time style="font-size:0.8rem;color:var(--sarva-muted);text-transform:uppercase;letter-spacing:0.05em">{formattedDate}</time>
+
+      <div class="post-content" style="margin-top:2rem">
+        <Content />
+      </div>
+
+      {comments && comments.length > 0 && (
+        <div class="comments-section">
+          <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem">Comments ({comments.length})</h2>
+          {comments.map((c: any) => (
+            <div class="comment">
+              <span class="comment-author">{c.author}</span>
+              <span class="comment-date">{c.date}</span>
+              <p class="comment-body">{c.content}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </main>
+</Base>

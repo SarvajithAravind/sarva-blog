@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { sub: 'what-if' }, props: { name: 'What If?', filterSlug: 'what-if' } },
+    { params: { sub: 'ottomans' }, props: { name: 'Ottoman Wars', filterSlug: 'ottomans' } },
+  ];
+}
+
+const { name, filterSlug } = Astro.props;
+const allPosts = await getCollection('posts');
+const posts = allPosts
+  .filter(p => p.data.category === 'History' && p.data.subcategories?.some((s: any) => s.slug === filterSlug))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+<Base title={name}>
+  <main class="sarva-main">
+    <div class="breadcrumb">
+      <a href="/blog">Blog</a>
+      <span>›</span>
+      <a href="/history">History</a>
+      <span>›</span>
+      <span style="color:var(--sarva-text)">{name}</span>
+    </div>
+
+    <h1 style="font-size:2.5rem;font-weight:700;margin-bottom:0.5rem">{name}</h1>
+    <p style="color:var(--sarva-muted);margin-bottom:2rem">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+
+    {posts.length === 0 ? (
+      <div style="padding:3rem;text-align:center;border:1px solid var(--sarva-border);border-radius:var(--radius);color:var(--sarva-muted)">
+        No posts yet — check back soon
+      </div>
+    ) : (
+      <div class="post-grid">
+        {posts.map(post => <PostCard post={post} />)}
+      </div>
+    )}
+  </main>
+</Base>

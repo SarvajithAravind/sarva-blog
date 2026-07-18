@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+
+const allPosts = await getCollection('posts');
+const posts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+<Base title="Blog">
+  <main class="sarva-main">
+    <p class="sarva-section-label">All Posts</p>
+    <h1 style="font-size:2.5rem;font-weight:700;margin-bottom:2rem;">Fresh from the crease</h1>
+    <div class="post-grid">
+      {posts.map(post => <PostCard post={post} />)}
+    </div>
+  </main>
+</Base>

@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+
+const allPosts = await getCollection('posts');
+const latest = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).slice(0, 6);
+---
+<Base title="Blog">
+  <main class="sarva-main">
+
+    <!-- Latest Posts -->
+    <section>
+      <p class="sarva-section-label">Latest Posts</p>
+      <h2 style="font-size:2rem;font-weight:700;margin-bottom:2rem">Fresh from the crease</h2>
+      <div class="post-grid">
+        {latest.map(post => <PostCard post={post} />)}
+      </div>
+    </section>
+
+    <!-- Browse by Category -->
+    <section style="margin-top:5rem">
+      <p class="sarva-section-label">Browse by Category</p>
+      <h2 style="font-size:2rem;font-weight:700;margin-bottom:2rem">Pick your lane</h2>
+      <div class="cat-grid">
+        <a href="/cricket" class="cat-card" style="background:linear-gradient(135deg,#0a1628,#1a3a6e)">
+          <div>
+            <h3>Cricket</h3>
+            <p>Match analysis, data breakdowns, and tactical deep dives across the IPL and beyond.</p>
+          </div>
+          <span class="cat-card-arrow">→</span>
+        </a>
+        <a href="/history" class="cat-card" style="background:linear-gradient(135deg,#2d1810,#8b3a20)">
+          <div>
+            <h3>History</h3>
+            <p>Counterfactual essays and untold stories from the turning points of the past.</p>
+          </div>
+          <span class="cat-card-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" style="margin-top:5rem;scroll-margin-top:5rem">
+      <p class="sarva-section-label">About</p>
+      <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem">Who's behind SARVA?</h2>
+      <div class="about-section">
+        <p>SARVA is a one-person passion project blending two obsessions: the numbers behind modern cricket and the what-ifs of history. Every post is written to be equal parts rigorous and readable — no jargon walls, just clear thinking. Started in 8th grade, built for keeps.</p>
+        <p>Thanks for stopping by.</p>
+      </div>
+    </section>
+
+  </main>
+</Base>
