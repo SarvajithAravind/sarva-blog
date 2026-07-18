@@ -28,8 +28,16 @@ const { title = 'SARVA', description = 'Cricket analysis and history, written wi
           <a href="/history">History</a>
           <a href="/about">About</a>
           <button class="sarva-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+          <button class="sarva-hamburger" id="hamburger-toggle" aria-label="Toggle menu">☰</button>
         </nav>
       </div>
+      <nav class="sarva-mobile-menu" id="mobile-menu">
+        <a href="/">Home</a>
+        <a href="/blog/main">Blog</a>
+        <a href="/cricket">Cricket</a>
+        <a href="/history">History</a>
+        <a href="/about">About</a>
+      </nav>
     </header>
   )}
 
@@ -51,6 +59,18 @@ const { title = 'SARVA', description = 'Cricket analysis and history, written wi
       const isLight = body.classList.contains('light');
       localStorage.setItem('sarva-theme', isLight ? 'light' : 'dark');
       btn.textContent = isLight ? '🌙' : '☀️';
+    });
+
+    // Mobile hamburger menu
+    const hamburger = document.getElementById('hamburger-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('open');
+    });
+
+    mobileMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
   </script>
 </body>
