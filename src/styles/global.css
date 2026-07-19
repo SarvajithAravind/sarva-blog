@@ -80,7 +80,7 @@ body {
 }
 .sarva-nav-links a:hover { opacity: 1; color: var(--sarva-text); }
 .sarva-toggle {
-  width: 2.25rem; height: 2.25rem;
+  width: 2.75rem; height: 2.75rem;
   border-radius: 50%; border: 1px solid var(--sarva-border);
   background: transparent; color: var(--sarva-text);
   cursor: pointer; display: flex; align-items: center; justify-content: center;
@@ -91,6 +91,8 @@ body {
 /* ── HAMBURGER / MOBILE MENU ── */
 .sarva-hamburger {
   display: none;
+  align-items: center; justify-content: center;
+  min-width: 2.75rem; min-height: 2.75rem;
   border: none; background: transparent;
   color: var(--sarva-text); font-size: 1.4rem;
   line-height: 1; cursor: pointer; padding: 0;
@@ -193,7 +195,7 @@ body {
 html.light .subcat-card:hover { background: #e8e8e4; }
 
 /* ── BREADCRUMB ── */
-.breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--sarva-muted); margin-bottom: 1.5rem; }
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; row-gap: 0.35rem; font-size: 0.8rem; color: var(--sarva-muted); margin-bottom: 1.5rem; }
 .breadcrumb a { color: var(--sarva-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--sarva-text); }
 .breadcrumb span { opacity: 0.4; }
@@ -315,7 +317,7 @@ html.light .subcat-card:hover { background: #e8e8e4; }
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .sarva-nav-links a:not(:last-child) { display: none; }
-  .sarva-hamburger { display: flex; align-items: center; justify-content: center; }
+  .sarva-hamburger { display: flex; }
   .post-grid { grid-template-columns: 1fr; }
 }
 @media (min-width: 641px) {
