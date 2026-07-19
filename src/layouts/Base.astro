@@ -16,6 +16,12 @@ const { title = 'SARVA', description = 'Cricket analysis and history, written wi
   <title>{title} — SARVA</title>
   <meta name="description" content={description} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script is:inline>
+    // Apply saved theme before first paint to avoid a flash of the wrong theme
+    if (localStorage.getItem('sarva-theme') === 'light') {
+      document.documentElement.classList.add('light');
+    }
+  </script>
 </head>
 <body>
   {showNav && (
@@ -23,7 +29,7 @@ const { title = 'SARVA', description = 'Cricket analysis and history, written wi
       <div class="sarva-nav-inner">
         <a href="/" class="sarva-logo">SARVA</a>
         <nav class="sarva-nav-links">
-          <a href="/blog">Blog</a>
+          <a href="/blog/main">Blog</a>
           <a href="/cricket">Cricket</a>
           <a href="/history">History</a>
           <a href="/about">About</a>
@@ -50,13 +56,12 @@ const { title = 'SARVA', description = 'Cricket analysis and history, written wi
   <script>
     // Theme toggle
     const btn = document.getElementById('theme-toggle');
-    const body = document.body;
-    const saved = localStorage.getItem('sarva-theme');
-    if (saved === 'light') { body.classList.add('light'); if (btn) btn.textContent = '🌙'; }
+    const html = document.documentElement;
+    if (html.classList.contains('light') && btn) { btn.textContent = '🌙'; }
 
     btn?.addEventListener('click', () => {
-      body.classList.toggle('light');
-      const isLight = body.classList.contains('light');
+      html.classList.toggle('light');
+      const isLight = html.classList.contains('light');
       localStorage.setItem('sarva-theme', isLight ? 'light' : 'dark');
       btn.textContent = isLight ? '🌙' : '☀️';
     });

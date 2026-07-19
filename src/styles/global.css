@@ -15,7 +15,7 @@
   --sarva-section-label: rgba(255,255,255,0.4);
 }
 
-body.light {
+html.light {
   --sarva-bg: #f5f5f0;
   --sarva-nav: rgba(245,245,240,0.85);
   --sarva-card: #ffffff;
@@ -190,7 +190,7 @@ body {
   transition: background 0.2s, transform 0.2s;
 }
 .subcat-card:hover { transform: translateY(-2px); background: rgba(255,255,255,0.08); }
-body.light .subcat-card:hover { background: #e8e8e4; }
+html.light .subcat-card:hover { background: #e8e8e4; }
 
 /* ── BREADCRUMB ── */
 .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--sarva-muted); margin-bottom: 1.5rem; }
